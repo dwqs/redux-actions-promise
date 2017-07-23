@@ -1,5 +1,5 @@
 {
-  "name": "redux-action-promise",
+  "name": "redux-actions-promise",
   "version": "0.0.1",
   "author": "pomysky@gmail.com",
   "description": "FSA-compliant promise middleware for Redux, supports referencing dispatcher/state in action",
