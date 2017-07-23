@@ -1,4 +1,3 @@
-import Animal from './animal';
 
 class T extends Animal {
 	constructor() {
