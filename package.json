@@ -6,6 +6,22 @@
   "license": "MIT",
   "main": "dist/index.min.js",
   "typings": "types/index.d.ts",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dwqs/redux-actions-promise"
+  },
+  "bugs": {
+    "url": "https://github.com/dwqs/redux-actions-promise/issues"
+  },
+  "keywords": [
+    "redux",
+    "middleware",
+    "redux-middleware",
+    "promise",
+    "fsa",
+    "fsa-action"
+  ],
   "scripts": {
     "clean": "rm -rf dist typings types",
     "prepush": "npm run lint",
