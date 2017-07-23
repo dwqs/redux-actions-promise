@@ -1,4 +1,5 @@
 import uglify from 'rollup-plugin-uglify';
+import { minify } from 'uglify-es';
 
 import config from './rollup.config';
 
@@ -10,7 +11,7 @@ config.plugins.push(
             drop_console: true
         },
         mangle: true
-    })
+    }, minify)
 );
 
 export default {
