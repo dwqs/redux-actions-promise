@@ -1,11 +1,18 @@
 import * as Redux from 'redux';
 
+export interface FSA {
+    type: any,
+    payload?: any,
+    error?: boolean,
+    meta?: any
+}
+
 function isPromise(val: any): boolean {
      return val && typeof val.then === 'function';
 }
 
-export default function ReduxActionsPromise<T>({ dispatch, getState }: Redux.MiddlewareAPI<T>) {
-    return <S>(next: Redux.Dispatch<S>) => (action: any) => {
+function reduxActionsPromise<T>({ dispatch, getState }: Redux.MiddlewareAPI<T>): any {
+    return <S>(next: Redux.Dispatch<S>) => (action: FSA) => {
         if (typeof action.payload === 'function') {
             const res = action.payload(dispatch, getState);
             if (isPromise(res)) {
@@ -32,3 +39,6 @@ export default function ReduxActionsPromise<T>({ dispatch, getState }: Redux.Mid
         }
     }
 }
+
+const ReduxActionsPromise: Redux.Middleware = reduxActionsPromise; 
+export default ReduxActionsPromise;
