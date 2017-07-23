@@ -1,8 +1,8 @@
 {
-  "name": "test",
-  "main": "dist/test.js",
-  "description": "A simple module build with ts-tool-template",
-  "authors": "your-email",
+  "name": "redux-actions-promise",
+  "main": "dist/index.js",
+  "description": "FSA-compliant promise middleware for Redux, supports referencing dispatcher/state in action",
+  "authors": "pomysky@gmail.com",
   "license": "MIT",
   "ignore": [
     "*",
