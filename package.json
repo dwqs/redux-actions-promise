@@ -1,19 +1,19 @@
 {
   "name": "redux-action-promise",
   "version": "0.0.1",
-  "author": "dwqs",
-  "description": "A new typescript project",
+  "author": "pomysky@gmail.com",
+  "description": "FSA-compliant promise middleware for Redux, supports referencing dispatcher/state in action",
   "license": "MIT",
-  "main": "dist/test.min.js",
+  "main": "dist/index.min.js",
   "typings": "types/index.d.ts",
   "scripts": {
-    "clean": "rm -rf dist typings example/dist types",
+    "clean": "rm -rf dist typings types",
     "prepush": "npm run lint",
-    "prebuild": "npm run prepush && ./node_modules/.bin/tsc -p ./tsconfig.types.json",
-    "build": "./node_modules/.bin/rollup -c && ./node_modules/.bin/rollup -c rollup.build.config.js",
+    "prebuild": "npm run prepush && npx tsc -p ./tsconfig.types.json",
+    "build": "npx rollup -c && npx rollup -c rollup.build.config.js",
     "postbuild": "mkdir types && mv typings/index.d.ts types/ && rm -rf typings",
-    "lint": "./node_modules/.bin/tslint -p ./tsconfig.json --type-check src/**/*.ts",
-    "fix": "./node_modules/.bin/tslint -p ./tsconfig.json --type-check --fix src/**/*.ts"
+    "lint": "npx tslint -p ./tsconfig.json --type-check src/**/*.ts",
+    "fix": "npx tslint -p ./tsconfig.json --type-check --fix src/**/*.ts"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -31,9 +31,11 @@
     "tslint": "^5.4.3",
     "typescript": "^2.4.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "flux-standard-action": "^1.2.0"
+  },
   "engines": {
-    "node": ">= 5.0.0",
-    "npm": ">= 3.0.0"
+    "node": ">= 6.0.0",
+    "npm": ">= 5.2.0"
   }
 }
