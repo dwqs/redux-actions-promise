@@ -4,7 +4,7 @@
 	(global.ReduxActionsPromise = factory());
 }(this, (function () { 'use strict';
 
-const __assign = Object.assign || function (target) {
+var __assign = Object.assign || function (target) {
     for (var source, i = 1; i < arguments.length; i++) {
         source = arguments[i];
         for (var prop in source) {
