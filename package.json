@@ -14,6 +14,13 @@
   "bugs": {
     "url": "https://github.com/dwqs/redux-actions-promise/issues"
   },
+  "files": [
+    "dist",
+    "types",
+    "typings",
+    "README.md",
+    "package.json"
+  ],
   "keywords": [
     "redux",
     "middleware",
